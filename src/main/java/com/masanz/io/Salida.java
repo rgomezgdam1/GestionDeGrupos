@@ -111,19 +111,53 @@ public class Salida {
     }
 
     public static void listarGrupos(Grupo[] grupos) {
-        //TODO: listarGrupos
+        if (grupos == null || grupos[0].getTamano() == 0){
+            System.err.println("El grupo no existe");
+        }
+        else {
+            for (int i = 0; i < grupos.length ; i++) {
+                int tmp = i +1;
+                System.out.println(("    " + tmp + ". " + grupos[i].getNombre() + " (" + grupos[i].getTamano()) + ")");
+            }
+        }
     }
 
     public static void listarPersonas(Persona[] personas) {
-        //TODO: listarPersonas (1)
+        for (int i = 0; i < personas.length; i++) {
+            if (personas[i] == null){
+                System.out.println("No hay más personas");
+            }
+            else {
+                int tmp = i + 1;
+                System.out.println(tmp + ". " + personas[i].toString());
+            }
+        }
     }
 
     public static void listarPersonas(Persona[] personas, int idx) {
-        //TODO: listarPersonas (2)
+        for (int i = idx; i < personas.length; i++) {
+            if (personas[i] == null){
+                System.out.println("La persona no existe");
+            }
+            else {
+                System.out.println(idx + ". " + personas[i].toString());
+            }
+        }
+
     }
 
     public static void pintar(Persona[][] personas) {
         //TODO: pintar
+        //if (personas == null){
+        //throw new NullPointerException("Personas no existe");
+        //}
+        //else{
+            for (int i = 0; i < personas[i].length; i++) {
+                for (int j = 0; j < personas[0].length; j++) {
+                    System.out.print(personas[j][i].getSiglas());
+                }
+                System.out.println();
+            }
+        }
     }
 
-}

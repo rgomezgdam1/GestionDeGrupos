@@ -83,7 +83,9 @@ public class Grupo {
 
     public Persona[] getPersonasPorApellidos() {
         //TODO: getPersonasPorApellidos
-        return null;
+        Persona[] a = new Persona[tamano];
+        System.arraycopy(personas,0,a,0,tamano);
+        return a;
     }
 
     /**

@@ -145,7 +145,14 @@ public class GestorDeGrupos {
 
     public Persona[][] getPersonasSitios(String grupo) {
         //TODO: getPersonasSitios
-        return null;
+        Grupo g = getGrupo(grupo);
+        Persona[][] tmp = new Persona[g.getFilas()][g.getColumnas()];
+        for (int i = 0; i < tmp.length; i++) {
+            for (int j = 0; j < tmp[0].length; j++) {
+                tmp[i][j] == g.;
+            }
+        }
+        return tmp;
     }
 
 }
