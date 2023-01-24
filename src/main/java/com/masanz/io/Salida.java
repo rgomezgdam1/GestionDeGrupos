@@ -1,5 +1,6 @@
 package com.masanz.io;
 
+import com.masanz.logic.GestorDeGrupos;
 import com.masanz.logic.Grupo;
 import com.masanz.logic.Persona;
 
@@ -50,7 +51,7 @@ public class Salida {
     }
 
 
-    public static void titGrListadoDeGrupos(){
+    public static void titGrListadoDeGrupos() {
         System.out.println("-----------------------------------------------------");
         System.out.println("1. Listado de grupos");
         System.out.println("-----------------------------------------------------");
@@ -111,12 +112,11 @@ public class Salida {
     }
 
     public static void listarGrupos(Grupo[] grupos) {
-        if (grupos == null || grupos[0].getTamano() == 0){
+        if (grupos == null || grupos[0].getTamano() == 0) {
             System.err.println("El grupo no existe");
-        }
-        else {
-            for (int i = 0; i < grupos.length ; i++) {
-                int tmp = i +1;
+        } else {
+            for (int i = 0; i < grupos.length; i++) {
+                int tmp = i + 1;
                 System.out.println(("    " + tmp + ". " + grupos[i].getNombre() + " (" + grupos[i].getTamano()) + ")");
             }
         }
@@ -124,10 +124,9 @@ public class Salida {
 
     public static void listarPersonas(Persona[] personas) {
         for (int i = 0; i < personas.length; i++) {
-            if (personas[i] == null){
+            if (personas[i] == null) {
                 System.out.println("No hay más personas");
-            }
-            else {
+            } else {
                 int tmp = i + 1;
                 System.out.println(tmp + ". " + personas[i].toString());
             }
@@ -136,10 +135,9 @@ public class Salida {
 
     public static void listarPersonas(Persona[] personas, int idx) {
         for (int i = idx; i < personas.length; i++) {
-            if (personas[i] == null){
+            if (personas[i] == null) {
                 System.out.println("La persona no existe");
-            }
-            else {
+            } else {
                 System.out.println(idx + ". " + personas[i].toString());
             }
         }
@@ -148,13 +146,16 @@ public class Salida {
 
     public static void pintar(Persona[][] personas) {
         //TODO: pintar
-        //if (personas == null){
-        //throw new NullPointerException("Personas no existe");
-        //}
-        //else{
-            for (int i = 0; i < personas[i].length; i++) {
+    //GestorDeGrupos tmp = new GestorDeGrupos();
+    //if (tmp.getPersonasSitios() == personas)
+            for (int i = personas.length - 1; i >= 0; i--) {
                 for (int j = 0; j < personas[0].length; j++) {
-                    System.out.print(personas[j][i].getSiglas());
+                    if (personas[i][j] == null){
+                        System.out.print("    ");
+                    }
+                    else {
+                    System.out.print(personas[i][j].getSiglas() + "  ");
+                    }
                 }
                 System.out.println();
             }

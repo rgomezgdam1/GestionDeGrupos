@@ -1,5 +1,7 @@
 package com.masanz.logic;
 
+import java.util.Arrays;
+
 public class Grupo {
 
     private String nombre;
@@ -84,7 +86,7 @@ public class Grupo {
     public Persona[] getPersonasPorApellidos() {
         //TODO: getPersonasPorApellidos
         Persona[] a = new Persona[tamano];
-        System.arraycopy(personas,0,a,0,tamano);
+        Arrays.sort(a);
         return a;
     }
 
@@ -156,6 +158,9 @@ public class Grupo {
      */
     public Persona getPersona(int idx) {
         //TODO: getPersona
+        if(idx > 0 && idx <= tamano){
+            return personas[idx - 1];
+            }
         return null;
     }
 

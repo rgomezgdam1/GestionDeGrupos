@@ -17,7 +17,7 @@ public class GestorDeGrupos {
 
     public Grupo getGrupo(String nombre) {
         int idx = getIndiceGrupo(nombre);
-        if (idx<0) {
+        if (idx < 0) {
             return null;
         }
         return grupos[idx];
@@ -25,7 +25,7 @@ public class GestorDeGrupos {
 
     public Grupo[] getGrupos() {
         Grupo[] g = new Grupo[numero];
-        System.arraycopy(grupos,0, g,0, numero);
+        System.arraycopy(grupos, 0, g, 0, numero);
         return g;
     }
 
@@ -41,7 +41,7 @@ public class GestorDeGrupos {
                 new Grupo("DAW1", 5, 7),
                 new Grupo("DAM1", 5, 9),
                 new Grupo("OTRO", 5, 9),
-                null,null,null,null,null,null,null
+                null, null, null, null, null, null, null
         };
         numero = 3;
     }
@@ -70,41 +70,41 @@ public class GestorDeGrupos {
                 new Persona("Evvy", "Seago", "ES", 99, 2, 0),
                 new Persona("Astrid", "Towner", "AT", 29, 2, 2),
                 new Persona("Nadeen", "Urrey", "NU", 0, 3, 2),
-                null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null
         };
-        grupos[0].setPersonasTamano(personasDAW1,19);
+        grupos[0].setPersonasTamano(personasDAW1, 19);
         Persona[] personasDAM1 = {
-            new Persona("Ignace", "Adamov", "IA", 72, 2, 1),
-            new Persona("Gwenette", "Adderley", "GA", 97, 2, 4),
-            new Persona("Sabrina", "Boncore", "SB", 52, 3, 0),
-            new Persona("Bunni", "Bullan", "BB", 96, 1, 6),
-            new Persona("Rebbecca", "Burstow", "RB", 80, 2, 7),
-            new Persona("Thoma", "Crallan", "TC", 56, 1, 0),
-            new Persona("Toby", "Crosen", "TC", 73, 1, 8),
-            new Persona("Wilhelmina", "Danbi", "WD", 100, 4, 8),
-            new Persona("Shana", "Dobel", "SD", 69, 4, 6),
-            new Persona("Tore", "Dutch", "TD", 1, 3, 4),
-            new Persona("Roslyn", "Gluyus", "RG", 82, 4, 4),
-            new Persona("Vilma", "Kertess", "VK", 95, 4, 3),
-            new Persona("Ethelred", "Kinnar", "EK", 89, 3, 1),
-            new Persona("Brana", "Langstaff", "BL", 30, 3, 7),
-            new Persona("Domeniga", "Matzke", "DM", 93, 2, 6),
-            new Persona("Arnaldo", "Monger", "AM", 99, 3, 6),
-            new Persona("Al", "Niblo", "AN", 53, 2, 0),
-            new Persona("Claudianus", "O'Calleran", "CO", 58,4,7),
-            new Persona("Adelaide", "Primrose", "AP", 10, 2, 8),
-            new Persona("Merrilee", "Simonich", "MS", 16, 1, 7),
-            new Persona("Jefferson", "Stevenson", "JS", 96, 3, 8),
-            new Persona("Jacqui", "Thody", "JT", 34, 1, 4),
-            new Persona("Barn", "Tongue", "BT", 23, 1, 3),
-            null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+                new Persona("Ignace", "Adamov", "IA", 72, 2, 1),
+                new Persona("Gwenette", "Adderley", "GA", 97, 2, 4),
+                new Persona("Sabrina", "Boncore", "SB", 52, 3, 0),
+                new Persona("Bunni", "Bullan", "BB", 96, 1, 6),
+                new Persona("Rebbecca", "Burstow", "RB", 80, 2, 7),
+                new Persona("Thoma", "Crallan", "TC", 56, 1, 0),
+                new Persona("Toby", "Crosen", "TC", 73, 1, 8),
+                new Persona("Wilhelmina", "Danbi", "WD", 100, 4, 8),
+                new Persona("Shana", "Dobel", "SD", 69, 4, 6),
+                new Persona("Tore", "Dutch", "TD", 1, 3, 4),
+                new Persona("Roslyn", "Gluyus", "RG", 82, 4, 4),
+                new Persona("Vilma", "Kertess", "VK", 95, 4, 3),
+                new Persona("Ethelred", "Kinnar", "EK", 89, 3, 1),
+                new Persona("Brana", "Langstaff", "BL", 30, 3, 7),
+                new Persona("Domeniga", "Matzke", "DM", 93, 2, 6),
+                new Persona("Arnaldo", "Monger", "AM", 99, 3, 6),
+                new Persona("Al", "Niblo", "AN", 53, 2, 0),
+                new Persona("Claudianus", "O'Calleran", "CO", 58, 4, 7),
+                new Persona("Adelaide", "Primrose", "AP", 10, 2, 8),
+                new Persona("Merrilee", "Simonich", "MS", 16, 1, 7),
+                new Persona("Jefferson", "Stevenson", "JS", 96, 3, 8),
+                new Persona("Jacqui", "Thody", "JT", 34, 1, 4),
+                new Persona("Barn", "Tongue", "BT", 23, 1, 3),
+                null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null
         };
-        grupos[1].setPersonasTamano(personasDAM1,23);
+        grupos[1].setPersonasTamano(personasDAM1, 23);
     }
 
     private void add(String grupo, Persona persona) {
         int i = getIndiceGrupo(grupo);
-        if (i>=0 && i<MAX) {
+        if (i >= 0 && i < MAX) {
             if (!grupos[i].add(persona)) {
                 Salida.warning("Problema al insertar la persona: " + persona);
             }
@@ -122,7 +122,7 @@ public class GestorDeGrupos {
 
     public Persona[] getPersonas(String grupo) {
         int i = getIndiceGrupo(grupo);
-        if (i<0 || i>=MAX) {
+        if (i < 0 || i >= MAX) {
             return null;
         }
         return grupos[i].getPersonasPorApellidos();
@@ -144,15 +144,14 @@ public class GestorDeGrupos {
     }
 
     public Persona[][] getPersonasSitios(String grupo) {
-        //TODO: getPersonasSitios
+        if (getGrupo(grupo) == null) {
+            return null;
+        }
         Grupo g = getGrupo(grupo);
         Persona[][] tmp = new Persona[g.getFilas()][g.getColumnas()];
-        for (int i = 0; i < tmp.length; i++) {
-            for (int j = 0; j < tmp[0].length; j++) {
-                tmp[i][j] == g.;
-            }
+        for (int i = 1; i <= g.getTamano(); i++) {
+            tmp[g.getPersona(i).getPosicion().getFila()][g.getPersona(i).getPosicion().getColumna()] = g.getPersona(i);
         }
         return tmp;
     }
-
 }
